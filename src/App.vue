@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <SearchBar @termChange="onTermChange"></SearchBar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchBar from './components/SearchBar'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SearchBar
+  },
+  methods: {
+    onTermChange: (searchTerm) => {
+      console.log(searchTerm)
+    }
   }
 }
 </script>
