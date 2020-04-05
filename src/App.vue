@@ -1,6 +1,5 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+  <div class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
     <VideoList :videos="videos"></VideoList>
   </div>
@@ -36,7 +35,6 @@ export default {
           }
         );
         this.videos = result.data.items;
-        console.log(this.videos);
       } catch (error) {
         console.error(error);
       }
@@ -46,12 +44,4 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
